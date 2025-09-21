@@ -1,11 +1,30 @@
-@import 'tailwindcss';
+    /* Top info bar hidden on mobile */
+    .top-bar {
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+      padding: 0.25rem 0;
+    }
+    .top-bar a {
+      color: #333;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    @media (max-width: 991px) {
+      .top-bar {
+        display: none;
+      }
+    }
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+    .action-icons .btn {
+      border: none;
+      background: transparent;
+      color: #333;
+      position: relative;
+    }
+    .action-icons .badge {
+      font-size: 0.65rem;
+    }
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+    .navbar {
+      padding: 0.5rem 0;
+    }
